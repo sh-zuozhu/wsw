@@ -1,0 +1,34 @@
+<configuration>
+
+   <!--  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <pattern>%date %level [%thread] %logger{36} [%file : %line] %msg%n</pattern>
+        </encoder>
+    </appender> -->
+
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/Users/jiaqiang/Documents/hxzq-demo/log/elp-all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>/Users/jiaqiang/Documents/hxzq-demo/log/elp-all-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy> 
+        </rollingPolicy>
+
+        <encoder charset="UTF-8">
+            <pattern>%date %level [%thread] %logger{36} [%file : %line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <logger name="com.alibaba.dubbo" level="DEBUG" additivity="false">  
+        <appender-ref ref="ROLLING"/>  
+    </logger> 
+    
+    <root level="DEBUG">
+        <!--<appender-ref ref="STDOUT"/>-->
+        <appender-ref ref="ROLLING"/>
+    </root>
+</configuration>
