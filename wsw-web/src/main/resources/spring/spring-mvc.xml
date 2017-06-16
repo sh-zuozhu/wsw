@@ -8,6 +8,15 @@
 
 	<mvc:default-servlet-handler />
 
+	<!-- 对静态资源文件的访问 restful -->
+	<mvc:resources mapping="/admin/**" location="/,/admin/" />
+	<mvc:resources mapping="/static/**" location="/,/static/" />
+	<mvc:resources mapping="/plugins/**" location="/,/plugins/" />
+	<mvc:resources mapping="/uploadFiles/**" location="/,/uploadFiles/" />
+	<mvc:resources mapping="/fh_static_1/**" location="/,/fh_static_1/" />
+	<mvc:resources mapping="/fh_static_2/**" location="/,/fh_static_2/" />
+	
+	
 	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views 
 		directory -->
 	<bean
@@ -17,6 +26,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<context:component-scan base-package="com.wsw.controller" />
 
 	<!-- 必须放到最后，否则指定的objectMapper会被覆盖掉 -->
 	<mvc:annotation-driven>
