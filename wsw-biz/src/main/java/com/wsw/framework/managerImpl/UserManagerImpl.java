@@ -28,5 +28,10 @@ public class UserManagerImpl implements UserManager{
 	public User queryUserByUserNameAndPassword(String userName, String password){
 		return userMapper.queryUserByUserNameAndPassword(userName, password);
 	}
+	
+	@Override
+	public int insert(User user){
+		return userMapper.insert(user);
+	}
 
 }

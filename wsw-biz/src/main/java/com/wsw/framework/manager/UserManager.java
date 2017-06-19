@@ -17,4 +17,6 @@ public interface UserManager {
 
 	User queryUserByUserNameAndPassword(String userName, String password);
 
+	int insert(User user);
+
 }
