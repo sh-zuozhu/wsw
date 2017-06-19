@@ -3,6 +3,7 @@ package com.wsw.controller.system.login;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -32,6 +33,14 @@ public class LoginController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("system/index/login");
 		return mv;
+	}
+	
+	@RequestMapping(value="login_login",produces="application/json;charset=UTF-8")
+	@ResponseBody
+	public Object login(){
+		
+		
+		return null;
 	}
 
 }

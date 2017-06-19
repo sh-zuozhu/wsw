@@ -106,7 +106,45 @@
 	</div>
 
 
-
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			changeCode1();
+			$("#codeImg").bind("click", changeCode1);
+		});
+		
+		function changeCode1(){
+			$("#codeImg").attr("src","code.do?t="+getTimestamp());
+		}
+		
+		function getTimestamp(){
+			var time = new Data();
+			return time.getTime();
+		}
+	
+		function severCheck(){
+			if(check()){
+				var loginname = $("#loginname").val();
+				var password = $("#password").val();
+				var code = loginname +","+ password +","+ $("#code").val();
+				$.ajax({
+					type: "POST",
+					url: 'login_login',
+					data: {KEYDATA:code, tm:new Date().getTime()},
+					dataType: 'json',
+					cache: false,
+					success: function(data){
+						if("success" == data.result){
+							saveCookie();
+							window.location.href="<%=basePath%>main/index";
+						}
+					}
+				});
+			}
+		}
+	
+	
+	</script>
 
 
 
@@ -121,5 +159,12 @@
 	<script type="text/javascript" src="static/js/jQuery.md5.js"></script>
 	<script type="text/javascript" src="static/js/jquery.tips.js"></script>
 	<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+	<script src="static/login/js/ban.js"></script>
+	
+	<!-- 软键盘控件start -->
+	<script type="text/javascript" src="static/login/keypad/js/form/keypad.js"></script>
+	<script type="text/javascript" src="static/login/keypad/js/framework.js"></script>
+	<!-- 软键盘控件end -->
+	
 </body>
 </html>
