@@ -48,6 +48,7 @@
 	           	/index.html					= anon
 	           	/fhadmin**/**				= anon
 	           	/weixin/** 					= anon
+	           	/main/** 					= anon
 	           	/**							= authc
 				</value>
 			</property>

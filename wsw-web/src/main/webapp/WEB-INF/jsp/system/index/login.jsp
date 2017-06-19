@@ -108,39 +108,100 @@
 
 	<script type="text/javascript">
 		
-		$(document).ready(function(){
+
+		$(document).ready(function() {
 			changeCode1();
 			$("#codeImg").bind("click", changeCode1);
 		});
-		
-		function changeCode1(){
-			$("#codeImg").attr("src","code.do?t="+getTimestamp());
+		function changeCode1() {
+			$("#codeImg").attr("src", "code.do?t=" + genTimestamp());
 		}
-		
-		function getTimestamp(){
-			var time = new Data();
+		function genTimestamp() {
+			var time = new Date();
 			return time.getTime();
 		}
-	
-		function severCheck(){
-			if(check()){
+		
+		function serverCheck() {
+// 			if (check()) {
+// 				var loginname = $("#loginname").val();
+// 				var password = $("#password").val();
+// 				var code = loginname + "," + password + "," + $("#code").val();
+// 				$.ajax({
+// 					type : "POST",
+// 					url : 'login_login',
+// 					data : {
+// 						KEYDATA : code,
+// 						tm : new Date().getTime()
+// 					},
+// 					dataType : 'json',
+// 					cache : false,
+// 					success : function(data) {
+// 						if ("success" == data.result) {
+// // 							saveCookie();
+<%-- 							window.location.href = "<%=basePath%>main/index"; --%>
+// 						}
+// 					}
+// 				});
+// 			}
+			
+			if(true){
 				var loginname = $("#loginname").val();
 				var password = $("#password").val();
-				var code = loginname +","+ password +","+ $("#code").val();
+				var code = loginname + "," + password + "," + $("#code").val();
 				$.ajax({
 					type: "POST",
 					url: 'login_login',
-					data: {KEYDATA:code, tm:new Date().getTime()},
-					dataType: 'json',
+			    	data: {KEYDATA:code,tm:new Date().getTime()},
+					dataType:'json',
 					cache: false,
 					success: function(data){
 						if("success" == data.result){
-							saveCookie();
+							alert("1234");
+// 							saveCookie();
 							window.location.href="<%=basePath%>main/index";
+						}else if("usererror" == data.result){
+							$("#loginname").tips({
+								side : 1,
+								msg : "用户名或密码有误",
+								bg : '#FF5080',
+								time : 15
+							});
+							showfh();
+							$("#loginname").focus();
+						}else if("codeerror" == data.result){
+							$("#code").tips({
+								side : 1,
+								msg : "验证码输入有误",
+								bg : '#FF5080',
+								time : 15
+							});
+							showfh();
+							$("#code").focus();
+						}else{
+							$("#loginname").tips({
+								side : 1,
+								msg : "缺少参数",
+								bg : '#FF5080',
+								time : 15
+							});
+							showfh();
+							$("#loginname").focus();
 						}
 					}
 				});
 			}
+		}
+		
+		function check(){
+// 			if($("#loginname").val() == ""){
+// 				$("#loginname").tips({
+// 					side :2,
+// 					msg : '用户名不能为空',
+// 					bg : '#AE81FF',
+// 					time : 3
+// 				});
+// 			}
+			return true;
 		}
 	
 	
