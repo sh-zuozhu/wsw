@@ -17,6 +17,8 @@
 
     <context:property-placeholder location="classpath*:*.properties" />
 
+	<context:component-scan base-package="com.wsw.framework.managerImpl" />
+
 	<!-- enable autowire -->
 	<context:annotation-config />
 

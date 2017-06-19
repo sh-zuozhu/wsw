@@ -1,5 +1,7 @@
 package com.wsw.dao.mapper;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.wsw.dao.model.User;
 
 /**
@@ -25,4 +27,12 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    /**
+     * 根据用户名，密码查询用户
+     * @param userName
+     * @param password
+     * @return
+     */
+	User queryUserByUserNameAndPassword(@Param("username")String username, @Param("password")String password);
 }

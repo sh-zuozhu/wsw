@@ -6,7 +6,7 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.session.Session;
-import org.jboss.netty.util.internal.StringUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.wsw.controller.base.BaseController;
+import com.wsw.dao.model.User;
+import com.wsw.framework.manager.UserManager;
 import com.wsw.util.model.Const;
 import com.wsw.util.model.PageData;
 import com.wsw.util.tools.AppUtil;
@@ -32,6 +34,9 @@ import com.wsw.util.tools.Jurisdiction;
  */
 @Controller
 public class LoginController extends BaseController{
+	
+	@Autowired
+	private UserManager userManager;
 	
 	
 	@RequestMapping(value="/fhadmin/login")
@@ -70,7 +75,12 @@ public class LoginController extends BaseController{
 			}
 			 //2.验证用户名密码
 			String passwd = new SimpleHash("SHA-1", userName, password).toString();
-			
+			User user = userManager.queryUserByUserNameAndPassword(userName, passwd);
+			if(user != null){
+				errInfo = "success";
+			}else{
+				errInfo = "usererror";
+			}
 		}else {
 			errInfo = "paramserror";//缺少参数
 		}
