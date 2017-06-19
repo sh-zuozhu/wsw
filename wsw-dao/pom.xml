@@ -78,7 +78,23 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.38</version>
 		</dependency>
-
+		<!-- 权限管理shiro -->
+		<dependency>  
+            <groupId>org.apache.shiro</groupId>  
+            <artifactId>shiro-core</artifactId>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.apache.shiro</groupId>  
+            <artifactId>shiro-web</artifactId>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.apache.shiro</groupId>  
+            <artifactId>shiro-cas</artifactId>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.apache.shiro</groupId>  
+            <artifactId>shiro-spring</artifactId>  
+  </dependency>
 	</dependencies>
 
 	<build>

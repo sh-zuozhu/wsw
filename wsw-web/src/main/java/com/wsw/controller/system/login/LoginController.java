@@ -1,10 +1,17 @@
 package com.wsw.controller.system.login;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.wsw.controller.base.BaseController;
+import com.wsw.util.model.PageData;
+import com.wsw.util.tools.AppUtil;
 
 /**
  * 
@@ -18,7 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
-public class LoginController {
+public class LoginController extends BaseController{
 	
 	
 	@RequestMapping(value="/fhadmin/login")
@@ -38,9 +45,18 @@ public class LoginController {
 	@RequestMapping(value="login_login",produces="application/json;charset=UTF-8")
 	@ResponseBody
 	public Object login(){
-		
-		
-		return null;
+		Map<String, String> map = new HashMap<String, String>();
+		PageData pd = this.getPageData();
+		String errInfo = "";
+		String[] keyData = pd.getString("KEYDATA").split(",");
+		if(null != keyData && keyData.length == 3){
+			 //1.校验图片验证码
+			 //2.验证用户名密码
+		}else {
+			errInfo = "paramserror";//缺少参数
+		}
+		map.put("result", errInfo);
+		return AppUtil.returnObject(pd, map);
 	}
 
 }

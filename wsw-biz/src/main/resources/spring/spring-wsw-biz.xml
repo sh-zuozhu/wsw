@@ -25,15 +25,15 @@
 	<aop:aspectj-autoproxy  expose-proxy="true" />
 
 
-	<import resource="classpath*:/spring/spring-cts-constants.xml" />
-	<import resource="classpath*:/spring/spring-cts-provider.xml" />
-	<import resource="classpath*:/spring/spring-cts-builder.xml" />
-	<import resource="classpath*:/spring/spring-cts-framework.xml" />
-	<import resource="classpath*:/spring/spring-cts-redis.xml" />
-	<import resource="classpath*:/spring/spring-cts-mq.xml" />
-	<import resource="classpath*:/spring/spring-cts-common.xml" />
-	<import resource="classpath*:/spring/spring-cts-remote.xml" />
-	<import resource="classpath*:/spring/spring-cts-dao.xml" />
-	<import resource="classpath*:/spring/spring-cts-subapkind.xml" />
+	<import resource="classpath*:/spring/spring-wsw-constants.xml" />
+	<import resource="classpath*:/spring/spring-wsw-provider.xml" />
+	<import resource="classpath*:/spring/spring-wsw-builder.xml" />
+	<import resource="classpath*:/spring/spring-wsw-framework.xml" />
+	<import resource="classpath*:/spring/spring-wsw-redis.xml" />
+	<import resource="classpath*:/spring/spring-wsw-mq.xml" />
+	<import resource="classpath*:/spring/spring-wsw-common.xml" />
+	<import resource="classpath*:/spring/spring-wsw-remote.xml" />
+	<import resource="classpath*:/spring/spring-wsw-dao.xml" />
+	<import resource="classpath*:/spring/spring-wsw-subapkind.xml" />
 
 </beans>
