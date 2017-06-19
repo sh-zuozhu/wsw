@@ -15,6 +15,7 @@
      http://www.springframework.org/schema/aop
      http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
+    <context:property-placeholder location="classpath*:*.properties" />
 
 	<!-- enable autowire -->
 	<context:annotation-config />
@@ -35,5 +36,6 @@
 	<import resource="classpath*:/spring/spring-wsw-remote.xml" />
 	<import resource="classpath*:/spring/spring-wsw-dao.xml" />
 	<import resource="classpath*:/spring/spring-wsw-subapkind.xml" />
+	<import resource="classpath*:/spring/spring-wsw-shiro.xml" />
 
 </beans>

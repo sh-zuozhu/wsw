@@ -14,10 +14,15 @@ import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.wsw.util.model.Const;
 
 /**
  * 
@@ -39,7 +44,10 @@ public class ImgCodeController {
 	@RequestMapping
 	public void generateImgCode(HttpServletResponse response){
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
-		drawImg(output);
+		String code = drawImg(output);
+		Subject currentUser = SecurityUtils.getSubject();
+		Session session = currentUser.getSession();
+		session.setAttribute(Const.SESSION_SECURITY_CODE, code);
 		try {
 			ServletOutputStream out = response.getOutputStream();
 			output.writeTo(out);
