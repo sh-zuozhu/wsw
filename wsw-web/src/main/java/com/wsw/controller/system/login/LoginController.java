@@ -8,6 +8,7 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,6 +20,7 @@ import com.wsw.util.model.Const;
 import com.wsw.util.model.PageData;
 import com.wsw.util.tools.AppUtil;
 import com.wsw.util.tools.Jurisdiction;
+import com.wsw.util.tools.Tools;
 
 /**
  * 
@@ -44,19 +46,22 @@ public class LoginController extends BaseController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/main/index")
-	public ModelAndView toLogin3() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("system/index/main");
-		return mv;
-	}
-
-//	@RequestMapping(value = "/main/{changeMenu}")
-//	public ModelAndView login_index(@PathVariable("changeMenu") String changeMenu) {
+//	@RequestMapping(value = "/main/index")
+//	public ModelAndView toLogin3() {
 //		ModelAndView mv = new ModelAndView();
 //		mv.setViewName("system/index/main");
 //		return mv;
 //	}
+
+	@RequestMapping(value = "/main/{changeMenu}")
+	public ModelAndView login_index(@PathVariable("changeMenu") String changeMenu) {
+		ModelAndView mv = new ModelAndView();
+		PageData pd = this.getPageData();
+		pd.put("SYSNAME", Tools.readTxtFile(Const.SYSNAME));
+		mv.addObject("pd", pd);
+		mv.setViewName("system/index/main");
+		return mv;
+	}
 
 	@RequestMapping(value = "/login_login", produces = "application/json;charset=UTF-8")
 	@ResponseBody

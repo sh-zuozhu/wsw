@@ -34,6 +34,7 @@
 			<property name="filterChainDefinitions">
 				<value>
 				/static/login/** 			= anon
+				/static/** 					= anon
 				/plugins/keypad/** 			= anon
 				/static/js/myjs/** 			= authc
 				/static/js/** 				= anon
