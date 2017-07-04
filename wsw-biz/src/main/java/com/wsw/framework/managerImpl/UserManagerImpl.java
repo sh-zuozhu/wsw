@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wsw.dao.mapper.UserMapper;
-import com.wsw.dao.model.User;
 import com.wsw.framework.manager.UserManager;
+import com.wsw.model.pojo.User;
 
 /**
  * 

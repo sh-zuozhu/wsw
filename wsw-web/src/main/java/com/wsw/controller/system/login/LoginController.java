@@ -1,6 +1,7 @@
 package com.wsw.controller.system.login;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.wsw.controller.base.BaseController;
-import com.wsw.dao.model.User;
 import com.wsw.framework.manager.UserManager;
+import com.wsw.model.pojo.User;
 import com.wsw.util.model.Const;
 import com.wsw.util.model.PageData;
 import com.wsw.util.tools.AppUtil;
@@ -58,6 +59,7 @@ public class LoginController extends BaseController {
 		ModelAndView mv = new ModelAndView();
 		PageData pd = this.getPageData();
 		pd.put("SYSNAME", Tools.readTxtFile(Const.SYSNAME));
+		
 		mv.addObject("pd", pd);
 		mv.setViewName("system/index/main");
 		return mv;

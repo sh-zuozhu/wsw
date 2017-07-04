@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wsw.controller.base.BaseController;
-import com.wsw.dao.model.User;
 import com.wsw.framework.manager.UserManager;
+import com.wsw.model.pojo.User;
 import com.wsw.util.enums.WswErrorCode;
 import com.wsw.util.model.Const;
 import com.wsw.util.model.PageData;

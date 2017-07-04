@@ -1,6 +1,6 @@
 package com.wsw.framework.manager;
 
-import com.wsw.dao.model.User;
+import com.wsw.model.pojo.User;
 
 /**
  * 

@@ -21,8 +21,8 @@
 		</javaTypeResolver>
 		<!-- 生成模型的包名和位置,与现有模型包名位置一致 -->
 		<javaModelGenerator 
-			targetPackage="com.wsw.dao.model" 
-			targetProject="wsw-dao/src/main/java">
+			targetPackage="com.wsw.model.pojo" 
+			targetProject="wsw-model/src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
@@ -40,7 +40,7 @@
 		</javaClientGenerator> 
 		
 	<!-- 要生成哪些表 -->
-	<table tableName="sys_user" domainObjectName="User"
+	<table tableName="sys_menu" domainObjectName="Menu"
 		enableCountByExample="false" enableUpdateByExample="false"
 		enableDeleteByExample="false" enableSelectByExample="false"
 		selectByExampleQueryId="false">
