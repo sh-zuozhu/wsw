@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.wsw.controller.base.BaseController;
+import com.wsw.framework.manager.MenuManager;
 import com.wsw.framework.manager.UserManager;
+import com.wsw.model.pojo.Menu;
 import com.wsw.model.pojo.User;
 import com.wsw.util.model.Const;
 import com.wsw.util.model.PageData;
@@ -39,6 +41,9 @@ public class LoginController extends BaseController {
 
 	@Autowired
 	private UserManager userManager;
+	
+	@Autowired
+	private MenuManager menuManager;
 
 	@RequestMapping(value = "/fhadmin/login")
 	public ModelAndView toLogin() {
@@ -58,8 +63,11 @@ public class LoginController extends BaseController {
 	public ModelAndView login_index(@PathVariable("changeMenu") String changeMenu) {
 		ModelAndView mv = new ModelAndView();
 		PageData pd = this.getPageData();
+		List<Menu> menuList = null;
+		//TODO 暂时给全部的权限
+		menuList = menuManager.listAllMenuQx("0");
 		pd.put("SYSNAME", Tools.readTxtFile(Const.SYSNAME));
-		
+		mv.addObject("menuList", menuList);
 		mv.addObject("pd", pd);
 		mv.setViewName("system/index/main");
 		return mv;
