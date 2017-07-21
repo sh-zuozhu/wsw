@@ -36,6 +36,7 @@ public class MenuManagerImpl implements MenuManager {
 		List<Menu> menuList = menuMapper.queryByParentId(parentId);
 		for (Menu menu : menuList) {
 			menu.setSubMenu(listAllMenuQx(menu.getMenuId().toString()));
+			menu.setTarget("treeFrame");
 		}
 		return menuList;
 	}

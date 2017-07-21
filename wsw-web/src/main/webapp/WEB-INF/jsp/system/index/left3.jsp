@@ -1,14 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="static/ace/css/font-awesome.css" />
-</head>
-<body>
-	<div id="sidebar" class="sidebar                  responsive">
+<div id="sidebar" class="sidebar                  responsive">
 				<script type="text/javascript">
 					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
 				</script>
@@ -137,6 +130,4 @@
 			</div>
 <!--引入属于此页面的js -->
 	<script type="text/javascript" src="static/js/myjs/head.js"></script>
-	<link rel="stylesheet" href="static/ace/css/font-awesome.css" />
-</body>
-</html>
+	

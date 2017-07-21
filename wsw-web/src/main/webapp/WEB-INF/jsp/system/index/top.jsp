@@ -25,17 +25,6 @@
 }
 </style>
 
-<link rel="stylesheet" href="static/ace/css/bootstrap.css" />
-<link rel="stylesheet" href="static/ace/css/font-awesome.css" />
-<!-- page specific plugin styles -->
-<!-- text fonts -->
-<link rel="stylesheet" href="static/ace/css/ace-fonts.css" />
-<!-- ace styles -->
-<link rel="stylesheet" href="static/ace/css/ace.css"
-	class="ace-main-stylesheet" id="main-ace-style" />
-<!-- ace settings handler -->
-<script src="static/ace/js/ace-extra.js"></script>
-
 </head>
 <body>
 

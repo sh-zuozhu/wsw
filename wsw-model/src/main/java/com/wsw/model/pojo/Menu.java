@@ -34,6 +34,10 @@ public class Menu {
      * 子菜单
      */
     private List<Menu> subMenu;
+    
+    private boolean hasMenu = true;
+    
+    private String target;
 
     public Integer getMenuId() {
         return menuId;
@@ -105,5 +109,21 @@ public class Menu {
 
 	public void setSubMenu(List<Menu> subMenu) {
 		this.subMenu = subMenu;
+	}
+
+	public boolean isHasMenu() {
+		return hasMenu;
+	}
+
+	public void setHasMenu(boolean hasMenu) {
+		this.hasMenu = hasMenu;
+	}
+
+	public String getTarget() {
+		return target;
+	}
+
+	public void setTarget(String target) {
+		this.target = target;
 	}
 }

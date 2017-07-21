@@ -50,6 +50,8 @@
 	           	/fhadmin**/**				= anon
 	           	/weixin/** 					= anon
 	           	/main/** 					= anon
+	           	/myindex/** 				= anon
+	           	/** 						= anon
 	           	/**							= authc
 				</value>
 			</property>

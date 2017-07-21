@@ -52,12 +52,12 @@ public class LoginController extends BaseController {
 		return mv;
 	}
 	
-//	@RequestMapping(value = "/main/index")
-//	public ModelAndView toLogin3() {
-//		ModelAndView mv = new ModelAndView();
-//		mv.setViewName("system/index/main");
-//		return mv;
-//	}
+	@RequestMapping(value = "/index")
+	public ModelAndView toLogin3() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("system/index/index");
+		return mv;
+	}
 
 	@RequestMapping(value = "/main/{changeMenu}")
 	public ModelAndView login_index(@PathVariable("changeMenu") String changeMenu) {
