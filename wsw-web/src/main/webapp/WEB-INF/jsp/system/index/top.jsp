@@ -1,32 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<base href="<%=basePath%>">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8" />
-<title>${pd.SYSNAME}</title>
-<meta name="description" content="" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<!-- jsp文件头和头部 -->
-<%-- 	<%@ include file="top.jsp"%> --%>
-<style type="text/css">
-.commitopacity {
-	position: absolute;
-	width: 100%;
-	height: 100px;
-	background: #7f7f7f;
-	filter: alpha(opacity = 50);
-	-moz-opacity: 0.8;
-	-khtml-opacity: 0.5;
-	opacity: 0.5;
-	top: 0px;
-	z-index: 99999;
-}
-</style>
-
-</head>
-<body>
-
-</body>
-</html>
+﻿		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>${pd.SYSNAME}</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="static/ace/css/bootstrap.css" />
+		<link rel="stylesheet" href="static/ace/css/font-awesome.css" />
+		<!-- page specific plugin styles -->
+		<!-- text fonts -->
+		<link rel="stylesheet" href="static/ace/css/ace-fonts.css" />
+		<!-- ace styles -->
+		<link rel="stylesheet" href="static/ace/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="static/ace/css/ace-part2.css" class="ace-main-stylesheet" />
+		<![endif]-->
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="static/ace/css/ace-ie.css" />
+		<![endif]-->
+		<!-- inline styles related to this page -->
+		<!-- ace settings handler -->
+		<script src="static/ace/js/ace-extra.js"></script>
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+		<!--[if lte IE 8]>
+		<script src="static/ace/js/html5shiv.js"></script>
+		<script src="static/ace/js/respond.js"></script>
+		<![endif]-->

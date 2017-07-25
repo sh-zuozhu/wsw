@@ -62,17 +62,17 @@
             <div class="box01_content">
                 <div class="head_div">
                     <div class="cycle_item">
-                        <a href="https://yoomeili.cn" class="github_a" id="github_a" target="_blank">
+                        <a href="https://github.com/sh-zuozhu/wsw" class="github_a" id="github_a" target="_blank">
                             <span class="github_icon"></span>
                             <span class="github_text"><p class="item_name">GitHub</p></span>
                         </a>
-                        <a href="http://blog.yoomeili.cn" class="weibo_a" id="weibo_a" target="_blank">
+                        <a href="http://weibo.com/5970247367/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1" class="weibo_a" id="weibo_a" target="_blank">
                             <span class="weibo_icon"></span>
                             <span class="weibo_text"><p class="item_name">微博</p> </span>
                         </a>
-                        <a href="http://blog.yoomeili.cn" class="blog_a" id="blog_a" target="_blank">
+                        <a href="http://blog.csdn.net/a102615350" class="blog_a" id="blog_a" target="_blank">
                             <span class="blog_icon"></span>
-                            <span class="blog_text"><p class="item_name"> 博客</p></span>
+                            <span class="blog_text"><p class="item_name">博客</p></span>
                         </a>
 
                         <div class="green_cycle">
@@ -90,11 +90,11 @@
                     </div>
                 </div>
                 <h1 class="title">黑夜</h1>
-                <h2 class="title_h2">千里之行，始于足下</h2>
+                <h2 class="title_h2">要做全栈工程师的路人甲</h2>
                 <div id="box01_text">
-                <p class="box01_p">.</p>
-                <p class="box01_p">.</p>
-                <p class="box01_p">.</p>
+<!--                 <p class="box01_p">冰冻三尺，非一日之寒.</p> -->
+<!--                 <p class="box01_p">每一个过去都是未来的开始.</p> -->
+<!--                 <p class="box01_p">自律给我自由.</p> -->
                 </div>
             </div>
             <div class="arrow_div">
@@ -118,18 +118,14 @@
                 <div id="box02_text">
                     <h1>About Skill</h1>
                     <div class="overline"></div>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <p>2010年拥挤的实验室接触C/C++</p>
+                    <p>2013年3月到9月自学java，做了3个小项目</p>
+                    <p>2013年沈阳做企业级小项目，物流系统，后台管理系统等</p>
+                    <p>2014年到2015年9月在江苏乐买到做电商，接触大量新技术solar，redis，工作流，shiro等等</p>
+                    <p>2015年上海帮5买做电商</p>
+                    <p>2016年4月至今华信证券做交易</p>
+                    <p>以后</p>
+                    <p>做全栈工程师</p>
                 </div>
                 <div class="clear"></div>
             </div>
