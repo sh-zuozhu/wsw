@@ -7,12 +7,13 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.wsw.util.controller.base.BaseController;
+
 import cn.jpush.api.ErrorCodeEnum;
 import cn.jpush.api.IOSExtra;
 import cn.jpush.api.JPushClient;
 import cn.jpush.api.MessageResult;
 
-import com.fh.controller.base.BaseController;
 
 /** 
  * 说明：极光推送工具类

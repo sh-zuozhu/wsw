@@ -2,7 +2,10 @@ package com.wsw.framework.manager;
 
 import java.util.List;
 
-import com.wsw.model.pojo.Menu;
+import com.wsw.model.pojo.entity.system.Menu;
+
+
+
 
 /**
  * 

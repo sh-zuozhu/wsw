@@ -4,7 +4,10 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.wsw.model.pojo.Menu;
+import com.wsw.model.pojo.entity.system.Menu;
+
+
+
 
 /**
  * 

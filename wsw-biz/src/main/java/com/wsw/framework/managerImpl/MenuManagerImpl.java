@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.wsw.dao.mapper.MenuMapper;
 import com.wsw.framework.manager.MenuManager;
-import com.wsw.model.pojo.Menu;
+import com.wsw.model.pojo.entity.system.Menu;
 
 /**
  * 
@@ -34,10 +34,10 @@ public class MenuManagerImpl implements MenuManager {
 	@Override
 	public List<Menu> listAllMenuQx(String parentId){
 		List<Menu> menuList = menuMapper.queryByParentId(parentId);
-		for (Menu menu : menuList) {
-			menu.setSubMenu(listAllMenuQx(menu.getMenuId().toString()));
-			menu.setTarget("treeFrame");
-		}
+//		for (Menu menu : menuList) {
+//			menu.setSubMenu(listAllMenuQx(menu.getMenuId().toString()));
+//			menu.setTarget("treeFrame");
+//		}
 		return menuList;
 	}
 }

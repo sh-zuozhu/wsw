@@ -2,7 +2,8 @@ package com.wsw.dao.mapper;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.wsw.model.pojo.User;
+import com.wsw.model.pojo.entity.system.User;
+
 
 
 /**

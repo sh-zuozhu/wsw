@@ -8,6 +8,11 @@
   <artifactId>wsw-model</artifactId>
   
   <dependencies>
+	  		<dependency>
+				<groupId>com.wsw.demo</groupId>
+				<artifactId>wsw-common</artifactId>
+				<version>${wsw.version}</version>
+			</dependency>
   </dependencies>
 
 	<build>

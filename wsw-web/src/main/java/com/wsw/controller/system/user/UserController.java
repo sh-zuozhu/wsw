@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wsw.controller.base.BaseController;
 import com.wsw.framework.manager.UserManager;
-import com.wsw.model.pojo.User;
+import com.wsw.framework.others.Jurisdiction;
+import com.wsw.model.pojo.entity.system.User;
 import com.wsw.util.enums.WswErrorCode;
-import com.wsw.util.model.Const;
-import com.wsw.util.model.PageData;
-import com.wsw.util.tools.AppUtil;
-import com.wsw.util.tools.Jurisdiction;
+import com.wsw.util.others.AppUtil;
+import com.wsw.util.others.Const;
+import com.wsw.util.others.PageData;
 
 /**
  * 
@@ -65,12 +65,6 @@ public class UserController extends BaseController {
 		}
 		//4.数据入库
 		User regUser = new User();
-		regUser.setEmail(pd.getString("email"));
-		regUser.setIp(pd.getString("ip"));
-		regUser.setName(pd.getString("name"));
-		regUser.setPassword(password);
-		regUser.setUsername("username");
-		regUser.setUserId(get32UUID());
 		userManager.insert(regUser);
 		map.put("result", result);
 		return AppUtil.returnObject(pd, map);

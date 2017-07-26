@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.wsw.dao.mapper.UserMapper;
 import com.wsw.framework.manager.UserManager;
-import com.wsw.model.pojo.User;
+import com.wsw.model.pojo.entity.system.User;
 
 /**
  * 

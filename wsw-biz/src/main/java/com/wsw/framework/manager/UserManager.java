@@ -1,6 +1,6 @@
 package com.wsw.framework.manager;
 
-import com.wsw.model.pojo.User;
+import com.wsw.model.pojo.entity.system.User;
 
 /**
  * 

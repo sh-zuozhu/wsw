@@ -17,13 +17,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.wsw.controller.base.BaseController;
 import com.wsw.framework.manager.MenuManager;
 import com.wsw.framework.manager.UserManager;
-import com.wsw.model.pojo.Menu;
-import com.wsw.model.pojo.User;
-import com.wsw.util.model.Const;
-import com.wsw.util.model.PageData;
-import com.wsw.util.tools.AppUtil;
-import com.wsw.util.tools.Jurisdiction;
-import com.wsw.util.tools.Tools;
+import com.wsw.framework.others.Jurisdiction;
+import com.wsw.model.pojo.entity.system.Menu;
+import com.wsw.model.pojo.entity.system.User;
+import com.wsw.util.others.AppUtil;
+import com.wsw.util.others.Const;
+import com.wsw.util.others.PageData;
+import com.wsw.util.others.Tools;
 
 /**
  * 
@@ -65,7 +65,7 @@ public class LoginController extends BaseController {
 		PageData pd = this.getPageData();
 		List<Menu> menuList = null;
 		//TODO 暂时给全部的权限
-		menuList = menuManager.listAllMenuQx("0");
+//		menuList = menuManager.listAllMenuQx("0");
 		pd.put("SYSNAME", Tools.readTxtFile(Const.SYSNAME));
 		mv.addObject("menuList", menuList);
 		mv.addObject("pd", pd);

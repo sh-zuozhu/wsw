@@ -13,9 +13,10 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;    
 import javax.mail.internet.MimeBodyPart;    
 import javax.mail.internet.MimeMessage;    
-import javax.mail.internet.MimeMultipart;    
+import javax.mail.internet.MimeMultipart;
 
-import com.fh.controller.base.BaseController;
+import com.wsw.util.controller.base.BaseController;    
+
 
 /**   
  * 邮件发送器   
