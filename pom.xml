@@ -341,11 +341,7 @@
 				<version>${jackson.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.shhxzq.kernel</groupId>
-				<artifactId>kernel-schedule</artifactId>
-				<version>${kernel.schedule.version}</version>
-			</dependency>
+			
 			<!--权限管理shiro -->
 			<dependency>  
             <groupId>org.apache.shiro</groupId>  
